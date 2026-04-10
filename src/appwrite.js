@@ -51,7 +51,6 @@ export const updateMovieCount = async (searchTerm, movie) => {
     } catch (error) {
         console.log(error);
     }
-
 }
 
 export const loadingTrendingMovies = async() =>{
@@ -60,7 +59,7 @@ export const loadingTrendingMovies = async() =>{
             databaseId: APPWRITE_DATABASE_ID,
             tableId: APPWRITE_TABLE_ID,
             queries: [
-                Query.limit(5),
+                Query.limit(10),
                 Query.orderDesc("count")
             ]
         });
